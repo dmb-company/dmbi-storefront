@@ -5,6 +5,7 @@ import Link from 'next/link';
 const ProductCard = ({ product, className }) => {
     return (
         <Link
+            prefetch={true}
             href={`/products/${product.id}`}
             className={cn(
                 'min-h-64 space-y-2 rounded-md border bg-white px-3 pb-5 pt-3 shadow',
