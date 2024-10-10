@@ -39,7 +39,7 @@ const Header = () => {
                     <ul className="flex flex-col items-center justify-center space-y-3 text-base font-medium uppercase text-primary transition-all lg:flex-row lg:space-x-10 lg:space-y-0 lg:text-sm xl:space-x-10 xl:text-base">
                         {NAV_ITEMS.map((item) => (
                             <li key={item.title}>
-                                <Link href={item.url}>{item.title}</Link>
+                                <Link href={item.url} prefetch={true}>{item.title}</Link>
                             </li>
                         ))}
                         <li
