@@ -6,6 +6,7 @@ import Link from 'next/link';
 const NewsItem = ({ news }) => {
     return (
         <Link
+            prefetch={true}
             href={`/news/${news.id}`}
             className="block rounded-md border bg-white p-2 shadow"
         >
