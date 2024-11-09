@@ -4,11 +4,8 @@ import Button from '@/components/common/button';
 import Title from '@/components/common/title';
 import UsesCard from '@/components/homepage/uses/uses-card';
 import UsesCardSkeleton from '@/components/homepage/uses/uses-card-skeleton';
-import { useProductCategories } from 'medusa-react';
 
 const Uses = () => {
-    const { product_categories, isLoading } = useProductCategories();
-
     return (
         <div className="bg-primary px-5 pb-10 shadow-md">
             <Title className="text-center text-white">

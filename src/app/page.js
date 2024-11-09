@@ -23,7 +23,7 @@ export default function Home() {
             <Banner />
             <AboutSection />
             <PartnersSection />
-            <Uses />
+            {/* <Uses /> */}
             <div className="my-10 flex flex-col items-center justify-between space-y-3 px-10 md:flex-row md:space-x-10 md:space-y-0 md:px-16">
                 <Button className="w-full py-5 md:w-1/3">Tư vấn</Button>
                 <Button className="w-full py-5 md:w-1/3">Nhận báo giá</Button>
@@ -34,7 +34,7 @@ export default function Home() {
             <BestSelling />
             <div className="mb-20 grid grid-cols-4 gap-8 px-5 md:px-7 lg:grid-cols-3 lg:px-5 xl:px-0">
                 <PriceRequest className="col-span-4 md:col-span-2 lg:col-span-1" />
-                <News className="col-span-4 md:col-span-2 lg:col-span-2" />
+                {/* <News className="col-span-4 md:col-span-2 lg:col-span-2" /> */}
             </div>
         </main>
     );

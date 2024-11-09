@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { ProductCardSkeleton, Slider, Title } from '../common';
-import { useProducts } from 'medusa-react';
 import ProductCard from '../common/product-card';
 
 const SimilarProducts = () => {

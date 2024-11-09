@@ -5,14 +5,13 @@ import React from 'react';
 
 const PartnersSection = async () => {
     const partners = await getPartners();
-    // console.log(partners);
     return (
         <div className="mb-10 bg-primary md:mb-16 md:text-center">
             <Title className="text-center text-white">
                 Đối tác của DMB Industrial
             </Title>
             <div>
-                <PartnerSlider partners={partners.partners} />
+                <PartnerSlider partners={partners} />
             </div>
         </div>
     );

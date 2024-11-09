@@ -1,5 +1,4 @@
 'use client';
-import { useProducts } from 'medusa-react';
 import React, { useEffect, useState } from 'react';
 import {
     BannerTemplate,

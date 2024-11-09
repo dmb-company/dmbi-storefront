@@ -6,7 +6,6 @@ import TextViewer from '@/components/homepage/about/text-view';
 
 const AboutSection = async () => {
     const store = await getStore();
-    // console.log(store);
 
     return (
         <div className="">

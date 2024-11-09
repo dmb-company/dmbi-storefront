@@ -1,5 +1,4 @@
 'use client';
-import { useProductCategories } from 'medusa-react';
 import React from 'react';
 import { Dropdown } from '../common';
 

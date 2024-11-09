@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
 import { Dropdown } from '../common';
-import { useProductTags } from 'medusa-react';
 
 const TagsFilter = ({ setTagsId }) => {
     const { product_tags, isLoading } = useProductTags();
