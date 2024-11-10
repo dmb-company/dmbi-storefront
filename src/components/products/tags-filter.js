@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { Dropdown } from '../common';
 
 const TagsFilter = ({ setTagsId }) => {
-    const { product_tags, isLoading } = useProductTags();
     return (
         <Dropdown open label={'Tags'}>
             {isLoading ? (

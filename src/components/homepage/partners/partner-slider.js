@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-'use client';
 
+import { getPartners } from '@/api/partners/api';
 import { Slider } from '@/components/common';
 
-const PartnerSlider = ({ partners }) => {
+const PartnerSlider = async () => {
+    const partners = await getPartners();
     return (
         <Slider>
             {partners?.map((partner, index) => {
