@@ -12,16 +12,13 @@ export const metadata = {
 export const dynamic = 'force-dynamic';
 
 const ProductsPage = async () => {
-    const store = await getStore();
-    const banners = await getBanners();
-
     const breadcrumb = [
         {
             title: 'Trang chủ',
             href: '/',
         },
         {
-            title: 'Sản phẩm chung',
+            title: 'Tất cả sản phẩm',
             href: '/products',
         },
     ];
@@ -32,11 +29,7 @@ const ProductsPage = async () => {
                 className={'px-3 py-3 md:px-5 lg:px-8'}
                 data={breadcrumb}
             />
-            <ProductsTemplate
-                banners={banners}
-                standeeImage={store?.metadata?.standee}
-                productOverall={store?.metadata?.productOverall}
-            />
+            <ProductsTemplate />
         </div>
     );
 };

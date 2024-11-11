@@ -1,3 +1,4 @@
+'use client';
 import { NAV_ITEMS } from '@/constants/constants';
 import { Search } from '../layout';
 import Link from 'next/link';
@@ -19,7 +20,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className="relative mx-auto flex max-w-screen-xl items-center justify-between px-5 py-4 md:px-8 md:py-6 lg:px-0">
+            <div className="relative mx-auto flex max-w-screen-xl items-center justify-between px-5 py-4 md:px-8 md:py-6 lg:px-5">
                 {/* logo */}
                 <Link href={'/'} className="block w-1/3">
                     <img
@@ -39,7 +40,9 @@ const Header = () => {
                     <ul className="flex flex-col items-center justify-center space-y-3 text-base font-medium uppercase text-primary transition-all lg:flex-row lg:space-x-10 lg:space-y-0 lg:text-sm xl:space-x-10 xl:text-base">
                         {NAV_ITEMS.map((item) => (
                             <li key={item.title}>
-                                <Link href={item.url} prefetch={true}>{item.title}</Link>
+                                <Link href={item.url} prefetch={true}>
+                                    {item.title}
+                                </Link>
                             </li>
                         ))}
                         <li

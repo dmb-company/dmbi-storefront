@@ -6,13 +6,11 @@ import { useEffect, useState } from 'react';
 
 const Footer = () => {
     const [store, setStore] = useState(null);
-    const { data, loading } = useFetch(BASE_URL + '/store/store');
+    const { data, loading } = useFetch(BASE_URL + '/store');
 
     useEffect(() => {
-        setStore(data?.store[0]);
+        setStore(data);
     }, [data]);
-
-    console.log(store);
 
     return (
         <footer className="min-h-[20vh] bg-primary">

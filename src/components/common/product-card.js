@@ -1,4 +1,5 @@
 import { cn, formatNumber } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
 
 /* eslint-disable @next/next/no-img-element */
@@ -12,10 +13,12 @@ const ProductCard = ({ product, className }) => {
                 className
             )}
         >
-            <img
+            <Image
+                width={500}
+                height={500}
                 src={product?.thumbnail}
                 alt={product?.title}
-                className="h-60 w-full object-contain"
+                className="h-60 w-full rounded object-cover"
             />
             <p className="line-clamp-3 text-base font-medium">
                 {product?.title}

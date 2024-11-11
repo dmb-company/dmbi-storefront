@@ -9,7 +9,7 @@ const ProductItem = ({ product }) => {
     return (
         <Link
             href={`/products/${product.id}`}
-            className="mx-[5px] mb-[20px] block rounded-md border bg-white p-[15px] shadow md:mx-0 md:h-[29.2%]"
+            className="mx-[5px] mb-[20px] block rounded-md border bg-white p-[15px] shadow md:mx-0"
         >
             <div className="inline">
                 <div className="w-1/1 md:w-1/1 inline">

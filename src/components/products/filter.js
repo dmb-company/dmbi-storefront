@@ -1,14 +1,16 @@
-import React from 'react';
-import TagsFilter from './tags-filter';
-import CategoriesFilter from './categories-filter';
-import CollectionsFilter from './collections-filter';
+import React, { Suspense } from 'react';
+import CategoriesFilterWrap from './categories-filter-wrap';
+import TagsFilterWrap from './tags-filter-wrap';
 
-const ProductFilter = ({ setTagsId, setCollectionsId, setCategoriesId }) => {
+const ProductFilter = () => {
     return (
         <div className="space-y-5">
-            <TagsFilter setTagsId={setTagsId} />
-            <CategoriesFilter setCategoriesId={setCategoriesId} />
-            <CollectionsFilter setCollectionsId={setCollectionsId} />
+            <Suspense>
+                <TagsFilterWrap />
+            </Suspense>
+            <Suspense>
+                <CategoriesFilterWrap />
+            </Suspense>
         </div>
     );
 };

@@ -8,7 +8,7 @@ const NewsItem = ({ news }) => {
         <Link
             prefetch={true}
             href={`/news/${news.id}`}
-            className="block rounded-md border bg-white p-2 shadow"
+            className="block rounded-md border bg-white p-3 transition-all hover:shadow"
         >
             <div className="grid-cols-3 gap-5 sm:block md:grid">
                 <div className="col-span-1 overflow-hidden rounded">
@@ -28,7 +28,7 @@ const NewsItem = ({ news }) => {
                         </div>
                     </div>
                     <div className="">
-                        <button className="btn w-[100px] rounded border-[2px] border-solid border-primary text-primary md:w-[120px]">
+                        <button className="btn w-[100px] rounded border-[1px] border-solid border-primary text-primary md:w-[120px]">
                             Xem thêm
                         </button>
                     </div>

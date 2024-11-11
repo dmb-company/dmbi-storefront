@@ -1,3 +1,5 @@
+import { instance } from '@/context/axios';
+
 const { medusa } = require('@/context/config');
 
 export const getProductTags = async (options) => {
@@ -10,10 +12,10 @@ export const getProductTags = async (options) => {
     return productTags;
 };
 
-export const getProducts = async (options) => {
-    const products = await medusa.products
-        .list(options)
-        .then((res) => res.products)
+export const getProducts = async () => {
+    const products = await instance
+        .get('/store/products')
+        .then(({ data }) => data?.products)
         .catch((err) => {
             console.log(err);
         });
@@ -21,9 +23,9 @@ export const getProducts = async (options) => {
 };
 
 export const getProduct = async (id) => {
-    const product = await medusa.products
-        .retrieve(id)
-        .then((res) => res.product)
+    const product = await instance
+        .get('/store/products/' + id)
+        .then(({ data }) => data)
         .catch((err) => console.log(err));
     return product;
 };

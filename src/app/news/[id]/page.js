@@ -18,14 +18,11 @@ export const generateMetadata = async ({ params }) => {
 const NewsDetail = async ({ params }) => {
     const otherNews = await getNews(4);
     const news = await getOneNews(params.id);
-    console.log(otherNews);
-    console.log('12345');
-    console.log(params.id);
     console.log(news);
 
     return (
         <div>
-            <div className="mx-auto grid min-h-[80vh] max-w-screen-xl grid-cols-12 gap-5 px-5 py-5 lg:px-0">
+            <div className="mx-auto grid min-h-[80vh] max-w-screen-xl grid-cols-12 gap-5 px-5 py-5 lg:px-5">
                 <div className="col-span-12 space-y-2 lg:col-span-3">
                     <div className="sticky top-36 space-y-2">
                         <div className="space-y-2 rounded-md bg-primary p-3 text-white">
@@ -49,7 +46,7 @@ const NewsDetail = async ({ params }) => {
                     <TextViewer content={news?.content} />
                 </div>
             </div>
-            <div className="mx-auto max-w-screen-xl">
+            <div className="mx-auto max-w-screen-xl px-5">
                 <Title className="lg:px-0">Bài viết khác</Title>
                 <div className="grid grid-cols-1 gap-5 px-5 pb-10 md:grid-cols-2 lg:grid-cols-4 lg:px-0">
                     {otherNews?.map((news) => {

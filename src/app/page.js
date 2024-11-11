@@ -17,7 +17,7 @@ export const metadata = {
         'DMB Industrial, chuyên cung cấp các sản phẩm công nghiệp, máy móc, thiết bị công nghiệp, dịch vụ sửa chữa, bảo trì máy móc công nghiệp',
 };
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export default function Home() {
     return (
@@ -44,7 +44,7 @@ export default function Home() {
             {/* <BestSelling /> */}
             <div className="mb-20 grid grid-cols-4 gap-8 px-5 md:px-7 lg:grid-cols-3 lg:px-5 xl:px-0">
                 <PriceRequest className="col-span-4 md:col-span-2 lg:col-span-1" />
-                {/* <News className="col-span-4 md:col-span-2 lg:col-span-2" /> */}
+                <News className="col-span-4 md:col-span-2 lg:col-span-2" />
             </div>
         </main>
     );
