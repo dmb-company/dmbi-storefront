@@ -7,7 +7,7 @@ import { useState } from 'react';
 const SearchResultsPage = ({ params }) => {
     const [currentPage, setCurrentPage] = useState(1);
 
-    const TOTAL_PAGES = Math.ceil(count / PRODUCTS_PER_PAGE);
+    const TOTAL_PAGES = Math.ceil(5 / PRODUCTS_PER_PAGE);
     return (
         <div className="mx-auto max-w-screen-xl px-10">
             <div className="py-5 text-xl font-semibold uppercase text-primary">

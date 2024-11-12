@@ -5,7 +5,7 @@ const Button = ({
     className = '',
     children,
     size = '',
-    href = '',
+    href = '/',
     // onClick = () => {},
 }) => {
     const ComponentTag = href ? Link : 'button';

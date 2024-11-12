@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { getNews, getOneNews } from '@/api/news/api';
-import { getProducts } from '@/api/products/api';
 import { Title } from '@/components/common';
 import TextViewer from '@/components/homepage/about/text-view';
 import NewsCategories from '@/components/news/detail/news-categories';
