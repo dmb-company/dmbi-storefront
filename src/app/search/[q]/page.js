@@ -2,18 +2,10 @@
 import { Pagination, ProductCardSkeleton } from '@/components/common';
 import ProductCard from '@/components/common/product-card';
 import { PRODUCTS_PER_PAGE } from '@/constants/constants';
-import { useProducts } from 'medusa-react';
 import { useState } from 'react';
 
 const SearchResultsPage = ({ params }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const {
-        products,
-        isLoading: isProductsLoading,
-        count,
-    } = useProducts({
-        q: params.q,
-    });
 
     const TOTAL_PAGES = Math.ceil(count / PRODUCTS_PER_PAGE);
     return (

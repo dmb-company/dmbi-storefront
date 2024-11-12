@@ -1,9 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
+import { getStore } from '@/api/store/api';
+import Image from 'next/image';
 
-const Standee = ({ standeeImage }) => {
+const Standee = async () => {
+    const store = await getStore();
+    const standeeImage = store?.metadata?.standee;
     return (
         <div>
-            <img src={standeeImage} alt="dmbi-standee" />
+            <Image
+                width={500}
+                height={500}
+                src={standeeImage}
+                alt="dmbi-standee"
+            />
         </div>
     );
 };

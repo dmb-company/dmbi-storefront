@@ -18,7 +18,6 @@ export const generateMetadata = async ({ params }) => {
 const NewsDetail = async ({ params }) => {
     const otherNews = await getNews(4);
     const news = await getOneNews(params.id);
-    console.log(news);
 
     return (
         <div>

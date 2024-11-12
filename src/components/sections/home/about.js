@@ -10,7 +10,7 @@ const AboutSection = async () => {
             <Title id="about">Giới thiệu về chúng tôi</Title>
             <div className="relative grid grid-cols-7 gap-4 border bg-white px-5 py-12 shadow">
                 <Image
-                    width={500}
+                    width={5000}
                     height={500}
                     priority={true}
                     src="/hero-banner.webp"
