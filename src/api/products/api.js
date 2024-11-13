@@ -1,8 +1,14 @@
 import { instance } from '@/context/axios';
 
-export const getProducts = async () => {
+export const getProducts = async (query, limit = 3, offset = 0) => {
     const products = await instance
-        .get('/store/products')
+        .get('/store/products', {
+            params: {
+                ...query,
+                limit,
+                offset,
+            },
+        })
         .then(({ data }) => data?.products)
         .catch((err) => {
             console.log(err);

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { getProducts, getProductTags } from '@/api/products/api';
 import Title from '@/components/common/title';
 import BestSellingSlider from '@/components/homepage/best-selling/best-selling-slider';

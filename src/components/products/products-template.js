@@ -7,13 +7,15 @@ import ProductsList from './products-list';
 import { Suspense } from 'react';
 import ProductsListSkeleton from './products-list-skeleton';
 
-const ProductsTemplate = () => {
+const ProductsTemplate = ({ props }) => {
     return (
         <div className="flex flex-col space-y-3 px-3 md:px-5 lg:flex-row lg:space-x-10 lg:space-y-0 lg:px-8">
             <div className="w-full pb-10 lg:block lg:w-1/4">
-                <div className="w-full space-y-5 rounded border bg-white p-5 shadow">
+                <div className="sticky top-36 w-full space-y-5 rounded border bg-white p-5 shadow transition-all">
                     <Search />
-                    <ProductFilter />
+                    <Suspense>
+                        <ProductFilter />
+                    </Suspense>
                     <div className="hidden lg:block">
                         <Suspense>
                             <Standee />
@@ -28,7 +30,7 @@ const ProductsTemplate = () => {
                             <ProductsListSkeleton PRODUCTS_PER_PAGE={6} />
                         }
                     >
-                        <ProductsList />
+                        <ProductsList query={props.searchParams} />
                     </Suspense>
                 </div>
                 <div>{/* Product overall */}</div>

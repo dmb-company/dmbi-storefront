@@ -12,7 +12,7 @@ export const metadata = {
 
 export const dynamic = 'force-dynamic';
 
-const ProductsPage = async () => {
+const ProductsPage = async (props) => {
     const breadcrumb = [
         {
             title: 'Trang chủ',
@@ -31,7 +31,7 @@ const ProductsPage = async () => {
                 data={breadcrumb}
             />
             <Suspense>
-                <ProductsTemplate />
+                <ProductsTemplate props={props} />
             </Suspense>
         </div>
     );

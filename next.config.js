@@ -5,6 +5,9 @@ const nextConfig = {
     // experimental: {
     //     ppr: true,
     // },
+    experimental: {
+        missingSuspenseWithCSRBailout: false,
+    },
     images: {
         remotePatterns: [
             {
