@@ -36,7 +36,7 @@ export default function Home() {
                 <Uses />
             </Suspense>
             <BestSelling />
-            <div className="my-10 flex flex-col items-center justify-between space-y-3 px-10 md:flex-row md:space-x-10 md:space-y-0 md:px-16">
+            <div className="my-16 flex flex-col items-center justify-between space-y-3 px-10 md:flex-row md:space-x-10 md:space-y-0 md:px-16">
                 <Button className="w-full py-5 md:w-1/3">Tư vấn</Button>
                 <Button className="w-full py-5 md:w-1/3">Nhận báo giá</Button>
                 <Button className="w-full py-5 md:w-1/3">

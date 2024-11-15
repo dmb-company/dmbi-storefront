@@ -8,7 +8,7 @@ const ProductCard = ({ product, className }) => {
         <Link
             href={`/products/${product.id}`}
             className={cn(
-                'min-h-64 space-y-2 rounded-md border bg-white px-3 pb-5 pt-3 shadow',
+                'min-h-64 space-y-2 rounded-md border bg-white px-3 pb-5 pt-3 transition-all hover:shadow-sm',
                 className
             )}
         >
