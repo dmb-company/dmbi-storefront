@@ -23,3 +23,11 @@ export const getProduct = async (id) => {
         .catch((err) => console.log(err));
     return product;
 };
+
+export const getBestSellerProducts = async () => {
+    const products = await instance
+        .get('/store/best-seller?limit=8')
+        .then(({ data }) => data?.products)
+        .catch((err) => console.log(err));
+    return products;
+};

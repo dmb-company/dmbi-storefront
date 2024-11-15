@@ -1,25 +1,22 @@
-'use client';
+import { getBestSellerProducts } from '@/api/products/api';
 
 const { Slider } = require('@/components/common');
 const { default: ProductCard } = require('@/components/common/product-card');
 
-const BestSellingSlider = ({ products }) => {
+const BestSellingSlider = async () => {
+    const products = await getBestSellerProducts();
     return (
-        <Slider
-            className={
-                'auto-cols-[100%] sm:auto-cols-[50%] md:auto-cols-[33%] lg:auto-cols-[25%]'
-            }
-        >
+        <div className={'grid grid-cols-12 gap-5 p-5'}>
             {products?.map((product, index) => {
                 return (
                     <ProductCard
                         key={index}
                         product={product}
-                        className={`${index === products.length - 1 && 'mr-5'}`}
+                        className={`col-span-12 md:col-span-3`}
                     />
                 );
             })}
-        </Slider>
+        </div>
     );
 };
 
