@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Navigation from '../common/navigation';
 import Image from 'next/image';
+import NavToggleButton from '../common/nav-toggle-button';
 
 const Header = () => {
     return (
@@ -31,6 +32,8 @@ const Header = () => {
                     <p>Hotline: 0917 700 303</p>
                     <p>Hỗ trợ kỹ thuật: 0911 435 283</p>
                 </div>
+
+                <NavToggleButton className="col-start-12" />
             </div>
             <Navigation />
         </header>
