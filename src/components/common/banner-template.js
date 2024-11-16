@@ -15,6 +15,7 @@ const BannerTemplate = ({ banners }) => {
                         key={banner.id}
                         src={banner.image_pc}
                         alt={banner.id}
+                        priority={true}
                         className="w-full object-cover"
                     />
                 ))}
