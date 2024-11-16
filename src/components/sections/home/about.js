@@ -20,8 +20,7 @@ const AboutSection = async () => {
                 <Suspense
                     fallback={
                         <div className="col-span-7 md:col-span-4 md:px-5 lg:px-10">
-                            {/* Skeleton loading placeholder */}
-                            <div className="h-[40vh] w-full animate-pulse bg-gray-300"></div>
+                            <div className="w-full animate-pulse bg-gray-300 md:h-[50vh]"></div>
                         </div>
                     }
                 >

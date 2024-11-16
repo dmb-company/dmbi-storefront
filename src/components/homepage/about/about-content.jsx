@@ -7,7 +7,7 @@ const AboutContent = async () => {
 
     return (
         <>
-            <div className="z-20 col-span-7 flex items-center border-primary/30 px-24 md:col-span-3 md:min-h-[40vh] md:border-r-2 md:px-16 lg:px-20">
+            <div className="z-20 col-span-7 flex h-[50vh] items-center overflow-hidden border-primary/30 px-24 md:col-span-3 md:min-h-[40vh] md:border-r-2 md:px-16 lg:px-20">
                 <Image
                     width={500}
                     height={500}
@@ -16,7 +16,7 @@ const AboutContent = async () => {
                     className="w-full object-cover"
                 />
             </div>
-            <div className="z-20 col-span-7 md:col-span-4 md:px-5 lg:px-10">
+            <div className="z-20 col-span-7 max-h-[50vh] overflow-y-auto md:col-span-4 md:px-5 lg:px-10">
                 <TextViewer content={store?.metadata?.about} />
             </div>
         </>
