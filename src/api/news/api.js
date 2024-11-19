@@ -1,6 +1,7 @@
+import { cache } from 'react';
 import { instance } from '@/context/axios';
 
-export const getNews = async (limit = 100, offset = 0) => {
+export const getNews = cache(async (limit = 100, offset = 0) => {
     const news = await instance
         .get('/store/articles', {
             params: {
@@ -14,20 +15,20 @@ export const getNews = async (limit = 100, offset = 0) => {
         });
 
     return news;
-};
+});
 
-export const getOneNews = async (id) => {
+export const getOneNews = cache(async (id) => {
     const news = await instance
         .get('/store/articles/' + id)
         .then(({ data }) => data)
         .catch((err) => console.log(err));
     return news;
-};
+});
 
-export const getNewsCategories = async () => {
+export const getNewsCategories = cache(async () => {
     const categories = await instance
         .get('/store/article-categories')
         .then(({ data }) => data?.articleCategories)
         .catch((err) => console.log(err));
     return categories;
-};
+});

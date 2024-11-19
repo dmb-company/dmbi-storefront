@@ -5,7 +5,7 @@ import Link from 'next/link';
 /* eslint-disable @next/next/no-img-element */
 const ProductCard = ({ product, className }) => {
     return (
-        <Link
+        <a
             href={`/products/${product.id}`}
             className={cn(
                 'min-h-64 space-y-2 rounded-md border bg-white px-3 pb-5 pt-3 transition-all hover:shadow-sm',
@@ -27,7 +27,7 @@ const ProductCard = ({ product, className }) => {
                     {formatNumber(product?.metadata?.price)} vnđ
                 </p>
             )}
-        </Link>
+        </a>
     );
 };
 

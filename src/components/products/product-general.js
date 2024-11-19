@@ -4,7 +4,7 @@ import GeneralInfoItem from './general-info-item';
 
 const ProductGeneral = ({ product, className = '' }) => {
     return (
-        <div className={cn('space-y-5 px-5', className)}>
+        <div className={cn('space-y-5', className)}>
             <h2 className="py-2 text-lg font-medium uppercase">
                 {product?.title}
             </h2>

@@ -7,9 +7,9 @@ const AboutContent = async () => {
 
     return (
         <>
-            <div className="z-20 col-span-7 flex h-[50vh] items-center overflow-hidden border-primary/30 px-24 md:col-span-3 md:min-h-[40vh] md:border-r-2 md:px-16 lg:px-20">
+            <div className="z-20 col-span-7 flex items-center overflow-hidden border-primary/30 px-24 md:col-span-3 md:h-[50vh] md:min-h-[40vh] md:border-r-2 md:px-16 lg:px-20">
                 <Image
-                    width={500}
+                    width={5000}
                     height={500}
                     src={store?.metadata?.image}
                     alt="about-image"

@@ -1,8 +1,11 @@
 import React from 'react';
 import { Title } from '../common';
 import NewsCard from './news-card';
+import { getNews } from '@/api/news/api';
 
-const News = ({ news }) => {
+const News = async () => {
+    const news = await getNews(3);
+    if (!news || news.length === 0) return;
     return (
         <div>
             <Title className="bg-primary text-white md:px-1 md:py-1 md:text-base">

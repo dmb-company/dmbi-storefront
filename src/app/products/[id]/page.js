@@ -1,22 +1,25 @@
-import { getNews } from '@/api/news/api';
 import { getProduct } from '@/api/products/api';
 import { ProductDetailTemplate } from '@/components/products';
+import { Suspense } from 'react';
 
-export async function generateMetadata({ params }) {
-    const product = await getProduct(params.id);
-
+// Define the metadata generator
+export const generateMetadata = async ({ params }) => {
     return {
-        title: product.title || 'DMB Industrial',
+        title: await getProduct(params.id).then((res) => {
+            return res.title;
+        }),
         description:
             'DMB Industrial, chuyên cung cấp các sản phẩm công nghiệp, máy móc, thiết bị công nghiệp, dịch vụ sửa chữa, bảo trì máy móc công nghiệp',
     };
-}
+};
 
+// Product detail page component
 const ProductDetailPage = async ({ params }) => {
-    const product = await getProduct(params.id);
-    const news = await getNews(3);
-
-    return <ProductDetailTemplate product={product} news={news} />;
+    return (
+        <Suspense fallback={<div>Loading product details...</div>}>
+            <ProductDetailTemplate id={params.id} />
+        </Suspense>
+    );
 };
 
 export default ProductDetailPage;

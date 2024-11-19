@@ -1,17 +1,16 @@
+import { getProduct } from '@/api/products/api';
 import { BreadCrumb, Title } from '../common';
 import TextViewer from '../homepage/about/text-view';
 import News from './news';
 import ProductGeneral from './product-general';
 import ProductImage from './product-image';
 import SimilarProducts from './similar-products';
+import { Suspense } from 'react';
+import Policy from './policy';
+import Specifications from './specifications';
 
-export const metadata = {
-    title: 'DMB Industrial',
-    description:
-        'DMB Industrial, chuyên cung cấp các sản phẩm công nghiệp, máy móc, thiết bị công nghiệp, dịch vụ sửa chữa, bảo trì máy móc công nghiệp',
-};
-
-const ProductDetailTemplate = ({ product, news }) => {
+const ProductDetailTemplate = async ({ id }) => {
+    const product = await getProduct(id);
     const breadcrumbData = [
         {
             title: 'Trang chủ',
@@ -23,24 +22,24 @@ const ProductDetailTemplate = ({ product, news }) => {
         },
         {
             title: product?.title,
-            href: `/products/${product?.id}`,
+            href: `/products/${id}`,
         },
     ];
 
     return (
         <div className="mx-auto mb-10 min-h-[80vh] max-w-screen-xl">
-            <BreadCrumb className={'pt-5'} data={breadcrumbData} />
+            <BreadCrumb className={'px-3 pt-5'} data={breadcrumbData} />
             <div className="grid grid-cols-12 gap-5">
-                <div className="col-span-12 grid grid-cols-7 gap-3 rounded border bg-white py-5 shadow md:gap-0 lg:col-span-9">
+                <div className="col-span-12 grid grid-cols-7 gap-3 rounded border bg-white px-3 py-5 shadow md:gap-3 lg:col-span-9">
                     <ProductImage
                         className="col-span-7 md:col-span-3"
-                        images={product?.images.map((image) => image.url)}
+                        images={product?.images?.images.map((image) => image)}
                     />
                     <ProductGeneral
                         className="col-span-7 md:col-span-4"
                         product={product}
                     />
-                    <div className="col-span-7 overflow-hidden px-5">
+                    <div className="col-span-7 overflow-hidden">
                         <Title className="px-0 text-base md:px-0 md:text-lg">
                             Mô tả
                         </Title>
@@ -48,20 +47,19 @@ const ProductDetailTemplate = ({ product, news }) => {
                     </div>
                 </div>
 
-                <div className="col-span-3 hidden lg:block">
+                <div className="col-span-12 space-y-3 lg:col-span-3 lg:block">
                     <div className="space-y-3 rounded border bg-white p-3 shadow">
                         <div className="border-b pb-2 text-sm font-semibold uppercase text-gray-600">
                             Chính sách hỗ trợ khách hàng
                         </div>
-                        <ul className="list-disc space-y-2 px-5 py-2 text-sm">
-                            <li>Thiết kế hệ thống xử lý khí thải</li>
-                            <li>Thiết kế hệ thống xử lý khí thải</li>
-                            <li>Thiết kế hệ thống xử lý khí thải</li>
-                            <li>Thiết kế hệ thống xử lý khí thải</li>
-                            <li>Thiết kế hệ thống xử lý khí thải</li>
-                        </ul>
-                        <News news={news} />
+                        <Suspense>
+                            <Policy />
+                        </Suspense>
                     </div>
+                    <Specifications product={product} />
+                    <Suspense>
+                        <News />
+                    </Suspense>
                 </div>
             </div>
             <SimilarProducts />

@@ -1,6 +1,7 @@
+import { cache } from 'react';
 import { instance } from '@/context/axios';
 
-export const getBanners = async () => {
+export const getBanners = cache(async () => {
     const banners = await instance
         .get('/store/banners')
         .then(({ data }) => data.banners)
@@ -8,7 +9,7 @@ export const getBanners = async () => {
             throw err;
         });
     return banners;
-};
+});
 
 // export const getBanners = async () => {
 //     try {

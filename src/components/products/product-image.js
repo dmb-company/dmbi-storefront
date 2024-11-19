@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 const ProductImage = ({ images, className = '' }) => {
     const [currentImage, setCurrentImage] = useState(images[0] || '');
     return (
-        <div className={cn('space-y-3 px-5', className)}>
+        <div className={cn('space-y-3', className)}>
             <div className="aspect-square w-full">
                 <img
                     src={currentImage}
