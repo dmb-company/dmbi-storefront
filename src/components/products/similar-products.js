@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import { ProductCardSkeleton, Slider, Title } from '../common';
 import ProductCard from '../common/product-card';
-import { getProducts } from '@/api/products/api';
 import ListSimilarProducts from './list-similar-products';
 
 const SimilarProducts = () => {
