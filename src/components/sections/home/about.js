@@ -14,7 +14,7 @@ const AboutSection = async () => {
                     height={500}
                     priority={true}
                     src="/hero-banner.webp"
-                    className="absolute bottom-0 left-0 right-0 top-0 z-10 h-full w-full object-cover"
+                    className="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover"
                     alt="DMB Industrial Company logo"
                 />
                 <Suspense

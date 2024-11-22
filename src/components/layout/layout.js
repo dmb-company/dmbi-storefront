@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
             <Header />
             <div className="min-h-[80vh]">{children}</div>
             <div className="fixed bottom-10 right-10 flex flex-col items-end space-y-2">
-                <div className="flex aspect-square w-16 animate-bounce items-center justify-center rounded-full border-2 border-blue-400 p-4">
+                <div className="z-50 flex aspect-square w-16 animate-bounce items-center justify-center rounded-full border-2 border-blue-400 bg-white p-4">
                     <a
                         href="https://zalo.me/2273702439801277716"
                         target="_blank"
