@@ -17,6 +17,7 @@ const PriceRequest = ({ className = '' }) => {
     } = useForm();
 
     const onSubmit = async (data) => {
+        console.log(data);
         toast.promise(sendPriceRequest(data), {
             pending: 'Đang gửi...',
             success: 'Đã gửi thành công yêu cầu!',

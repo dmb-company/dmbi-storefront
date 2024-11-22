@@ -30,7 +30,7 @@ const ProductDetailTemplate = async ({ id }) => {
         <div className="mx-auto mb-10 min-h-[80vh] max-w-screen-xl">
             <BreadCrumb className={'px-3 pt-5'} data={breadcrumbData} />
             <div className="grid grid-cols-12 gap-5">
-                <div className="col-span-12 grid grid-cols-7 gap-3 rounded border bg-white px-3 py-5 shadow md:gap-3 lg:col-span-9">
+                <div className="col-span-12 grid grid-cols-7 gap-3 rounded border bg-white px-3 py-5 shadow md:gap-3 md:px-5 lg:col-span-9">
                     <ProductImage
                         className="col-span-7 md:col-span-3"
                         images={product?.images?.images.map((image) => image)}
@@ -48,10 +48,10 @@ const ProductDetailTemplate = async ({ id }) => {
                 </div>
 
                 <div className="col-span-12 space-y-3 lg:col-span-3 lg:block">
-                    <div className="space-y-3 rounded border bg-white p-3 shadow">
-                        <div className="border-b pb-2 text-sm font-semibold uppercase text-gray-600">
+                    <div className="space-y-3 rounded border bg-white shadow">
+                        <Title className="bg-primary text-white md:px-2 md:py-1 md:text-base">
                             Chính sách hỗ trợ khách hàng
-                        </div>
+                        </Title>
                         <Suspense>
                             <Policy />
                         </Suspense>

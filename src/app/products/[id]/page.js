@@ -1,6 +1,6 @@
+import { Suspense } from 'react';
 import { getProduct } from '@/api/products/api';
 import { ProductDetailTemplate } from '@/components/products';
-import { Suspense } from 'react';
 
 // Define the metadata generator
 export const generateMetadata = async ({ params }) => {

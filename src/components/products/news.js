@@ -7,11 +7,11 @@ const News = async () => {
     const news = await getNews(3);
     if (!news || news.length === 0) return;
     return (
-        <div>
-            <Title className="bg-primary text-white md:px-1 md:py-1 md:text-base">
+        <div className="rounded-md border bg-white shadow">
+            <Title className="bg-primary text-white md:px-2 md:py-1 md:text-base">
                 Tin tức
             </Title>
-            <div className="space-y-2 py-2">
+            <div className="space-y-2 p-2">
                 {news?.map((post, i) => {
                     return <NewsCard key={post.id} post={post} />;
                 })}

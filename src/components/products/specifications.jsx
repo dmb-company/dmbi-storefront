@@ -6,8 +6,8 @@ const Specifications = ({ product }) => {
     if (!specifications) return;
 
     return (
-        <div>
-            <Title className="bg-primary text-white md:px-1 md:py-1 md:text-base">
+        <div className="rounded-md border shadow">
+            <Title className="bg-primary text-white md:px-2 md:py-1 md:text-base">
                 Thông số kỹ thuật
             </Title>
             <div className="space-y-2 bg-white p-2 text-sm">
