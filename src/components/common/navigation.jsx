@@ -2,7 +2,6 @@ import { NAV_ITEMS } from '@/constants/constants';
 import React, { Suspense } from 'react';
 import CategoriesList from './categories-list';
 import { Menu, SearchIcon } from 'lucide-react';
-import Link from 'next/link';
 
 const Navigation = () => {
     return (
@@ -22,9 +21,9 @@ const Navigation = () => {
                 <div className="hidden items-center justify-center space-x-20 lg:flex">
                     {NAV_ITEMS.map((item, index) => {
                         return (
-                            <Link href={item.url} key={index}>
+                            <a href={item.url} key={index}>
                                 {item.title}
-                            </Link>
+                            </a>
                         );
                     })}
                 </div>
