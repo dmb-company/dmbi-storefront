@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Navigation from '../common/navigation';
 import Image from 'next/image';
 import NavToggleButton from '../common/nav-toggle-button';
+import CompanyInfo from './company-info';
+import { Suspense } from 'react';
 
 const Header = () => {
     return (
@@ -18,20 +20,9 @@ const Header = () => {
                     />
                 </Link>
 
-                <div className="col-span-8 hidden text-center lg:block">
-                    <p className="text-xl font-semibold uppercase">
-                        CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI DMB TOÀN CẦU
-                    </p>
-                    <p className="text-sm">
-                        Cổng B, Khu công nghiệp Thăng Long, Thôn Hải Bối, Huyện
-                        Đông Anh, TP Hà Nội
-                    </p>
-                </div>
-
-                <div className="col-span-2 hidden text-sm font-semibold text-red-500 lg:block">
-                    <p>Hotline: 0917 700 303</p>
-                    <p>Hỗ trợ kỹ thuật: 0911 435 283</p>
-                </div>
+                <Suspense>
+                    <CompanyInfo />
+                </Suspense>
 
                 <NavToggleButton className="col-start-12" />
             </div>

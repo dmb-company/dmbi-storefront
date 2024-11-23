@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Footer, Header } from '../layout';
 import { PhoneCall } from 'lucide-react';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 const Layout = ({ children }) => {
     return (
@@ -34,7 +35,9 @@ const Layout = ({ children }) => {
                     </p>
                 </div>
             </div>
-            <Footer />
+            <Suspense>
+                <Footer />
+            </Suspense>
         </div>
     );
 };
