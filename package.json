@@ -10,6 +10,8 @@
     },
     "dependencies": {
         "@tanstack/react-query": "4.22",
+        "@vercel/analytics": "^1.4.1",
+        "@vercel/speed-insights": "^1.1.0",
         "axios": "^1.7.4",
         "axios-cache-interceptor": "^1.5.3",
         "clsx": "^2.1.1",
