@@ -28,16 +28,21 @@ const Navigation = () => {
                     })}
                 </div>
                 <div className="hidden py-2 lg:block">
-                    <div className="flex items-center justify-center rounded-3xl bg-white px-2 py-1">
+                    <form
+                        method="GET"
+                        action="/products"
+                        className="flex items-center justify-center rounded-3xl bg-white px-2 py-1"
+                    >
                         <input
+                            name="filter"
                             type="text"
                             placeholder="Tìm kiếm sản phẩm"
                             className="px-2 text-black outline-none"
                         />
-                        <button className="text-black">
+                        <button type="submit" className="text-black">
                             <SearchIcon />
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
