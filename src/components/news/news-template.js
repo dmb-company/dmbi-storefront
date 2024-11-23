@@ -1,8 +1,7 @@
-import ProductItem from './detail/products-card';
 import NewsList from './news-list';
 import { Suspense } from 'react';
 import ProductsList from './products-list';
-export const experimental_ppr = true;
+
 const NewsTemplate = () => {
     return (
         <div className="mx-auto block min-h-[80vh] max-w-screen-xl px-10">
