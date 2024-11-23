@@ -58,7 +58,7 @@ const Footer = async () => {
                         <span className="border-b-2">Chính sách</span>
                     </h3>
                     <div className="flex flex-col space-y-3 text-base">
-                        {store?.metadata?.policy?.map((e, i) => {
+                        {store?.metadata?.company_policy?.map((e, i) => {
                             return (
                                 <Link key={i} href={`/news/${e.id}`}>
                                     {e.label}
