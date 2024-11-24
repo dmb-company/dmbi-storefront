@@ -8,7 +8,7 @@ import ProductsListSkeleton from './products-list-skeleton';
 
 const ProductsList = ({ query }) => {
     const [products, setProducts] = useState([]);
-    const [hasMore, setHasMore] = useState(true);
+    const [hasMore, setHasMore] = useState(false);
     const [index, setIndex] = useState(PRODUCTS_PER_PAGE);
     const [isLoading, setIsLoading] = useState(true);
 

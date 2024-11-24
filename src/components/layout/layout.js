@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     return (
         <div className="min-h-screen bg-background">
             <Header />
-            <div className="min-h-[80vh]">{children}</div>
+            <div className="min-h-[80vh] px-5">{children}</div>
             <div className="fixed bottom-10 right-10 flex flex-col items-end space-y-2">
                 <div className="z-50 flex aspect-square w-16 animate-bounce items-center justify-center rounded-full border-2 border-blue-400 bg-white p-4">
                     <a

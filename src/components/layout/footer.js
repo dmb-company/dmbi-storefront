@@ -6,7 +6,7 @@ const Footer = async () => {
 
     return (
         <footer className="min-h-[20vh] bg-primary">
-            <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-10 px-5 py-16 text-white md:grid-cols-2 md:gap-5 md:px-5 lg:grid-cols-3 xl:px-0">
+            <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-10 px-5 py-16 text-white md:grid-cols-2 md:gap-5 md:px-5 lg:grid-cols-3 xl:px-5">
                 <div className="space-y-5 pr-10">
                     <h3 className="text-xl font-semibold uppercase">
                         <span className="border-b-2">Liên hệ</span>

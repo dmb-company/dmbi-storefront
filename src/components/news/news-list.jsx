@@ -8,7 +8,7 @@ const ARTICLES_PER_PAGE = 5;
 
 const NewsList = () => {
     const [articles, setArticles] = useState([]);
-    const [hasMore, setHasMore] = useState(true);
+    const [hasMore, setHasMore] = useState(false);
     const [index, setIndex] = useState(ARTICLES_PER_PAGE);
 
     useEffect(() => {

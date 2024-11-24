@@ -5,12 +5,12 @@ import { Menu, SearchIcon } from 'lucide-react';
 
 const Navigation = () => {
     return (
-        <div className="bg-primary text-sm uppercase">
-            <div className="mx-auto flex max-w-screen-xl items-center justify-between text-white">
-                <div className="group relative w-full cursor-pointer px-2 py-3 transition-all hover:bg-third hover:text-black lg:w-auto">
+        <div className="bg-primary pr-2 text-sm uppercase">
+            <div className="mx-auto flex max-w-screen-xl items-center justify-between px-2 text-white">
+                <div className="group relative w-full cursor-pointer px-4 py-3 transition-all hover:bg-third hover:text-black lg:w-auto lg:px-3">
                     <p className="flex items-center space-x-2">
                         <Menu />
-                        <span>Danh mục sản phẩm</span>
+                        <span className="font-semibold">Danh mục sản phẩm</span>
                     </p>
                     <div className="invisible absolute inset-0 top-full group-hover:visible">
                         <Suspense>
@@ -21,7 +21,11 @@ const Navigation = () => {
                 <div className="hidden items-center justify-center space-x-20 lg:flex">
                     {NAV_ITEMS.map((item, index) => {
                         return (
-                            <a href={item.url} key={index}>
+                            <a
+                                href={item.url}
+                                key={index}
+                                className="font-semibold"
+                            >
                                 {item.title}
                             </a>
                         );
