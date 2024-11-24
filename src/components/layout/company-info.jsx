@@ -11,10 +11,10 @@ const CompanyInfo = async () => {
             </div>
 
             <div className="col-span-2 hidden space-y-1 text-sm font-semibold text-red-500 lg:block">
-                <p className="flex animate-bounce items-center justify-center rounded-3xl border-2 border-red-300 px-3 py-1 text-red-500">
+                <p className="flex items-center justify-center rounded-3xl border-2 border-red-300 px-3 py-1 text-red-500">
                     Hotline: <span>{store?.metadata?.hotline}</span>
                 </p>
-                <p className="flex animate-bounce items-center justify-center rounded-3xl border-2 border-red-300 px-3 py-1 text-red-500">
+                <p className="flex items-center justify-center rounded-3xl border-2 border-red-300 px-3 py-1 text-red-500">
                     Hỗ trợ kỹ thuật: {store?.metadata?.support_hotline}
                 </p>
             </div>
