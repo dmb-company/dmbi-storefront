@@ -15,7 +15,7 @@ const CompanyInfo = async () => {
                     Hotline: <span>{store?.metadata?.hotline}</span>
                 </p>
                 <p className="flex items-center justify-center rounded-3xl border-2 border-red-300 px-3 py-1 text-red-500">
-                    Hỗ trợ kỹ thuật: {store?.metadata?.support_hotline}
+                    HTKT: {store?.metadata?.support_hotline}
                 </p>
             </div>
         </>
