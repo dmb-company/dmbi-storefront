@@ -27,7 +27,7 @@ const ProductsTemplate = ({ props }) => {
                 <div>
                     <Suspense
                         fallback={
-                            <ProductsListSkeleton PRODUCTS_PER_PAGE={6} />
+                            <ProductsListSkeleton PRODUCTS_PER_PAGE={9} />
                         }
                     >
                         <ProductsList query={props.searchParams} />
