@@ -17,7 +17,7 @@ const Uses = async () => {
                         <UsesCard
                             key={category?.id}
                             categoryId={category?.id}
-                            categoryTitle={category?.name}
+                            categoryTitle={category?.display_name}
                             categoryImage={category?.metadata?.image}
                         />
                     );
