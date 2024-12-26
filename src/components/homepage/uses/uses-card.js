@@ -8,8 +8,8 @@ const UsesCard = ({
     categoryId = '',
 }) => {
     return (
-        <Link
-            href={`/products/categories/${categoryId}`}
+        <a
+            href={`/categories/${categoryId}`}
             className="block space-y-4 rounded bg-white"
         >
             <div className="h-[200px] rounded">
@@ -26,7 +26,7 @@ const UsesCard = ({
                     {categoryTitle}
                 </div>
             </div>
-        </Link>
+        </a>
     );
 };
 

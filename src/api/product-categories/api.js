@@ -8,3 +8,10 @@ export const getProductCategories = cache(async () => {
         .catch((err) => console.log(err));
     return res;
 });
+
+export const getOneProductCategories = cache(async (id) => {
+    const res = await instance.get(`/store/categories/${id}`)
+        .then(({ data }) => data?.category)
+        .catch((err) => console.log(err));
+    return res;
+})
