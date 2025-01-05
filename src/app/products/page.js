@@ -27,7 +27,7 @@ const ProductsPage = async (props) => {
     return (
         <div className="mx-auto min-h-[80vh] max-w-screen-2xl">
             <BreadCrumb
-                className={'px-3 py-3 md:px-5 lg:px-8'}
+                className={'py-3 md:px-5 lg:px-8'}
                 data={breadcrumb}
             />
             <Suspense>
