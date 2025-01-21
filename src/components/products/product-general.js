@@ -45,9 +45,9 @@ const ProductGeneral = ({ product, className = '' }) => {
             <div className="border-2 border-primary p-10 text-center">
                 <span className="">
                     Liên hệ hotline:{' '}
-                    <span className="font-semibold text-primary">
-                        1900 5678
-                    </span>{' '}
+                    <a type='phone' href='tel:0917700303' className="font-semibold text-primary">
+                        0917.700.303
+                    </a>{' '}
                     để đặt hàng ngay.
                 </span>
             </div>
