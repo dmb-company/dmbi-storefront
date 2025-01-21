@@ -8,37 +8,42 @@ import ProductsListSkeleton from './products-list-skeleton';
 
 const ProductsList = ({ query }) => {
     const [products, setProducts] = useState([]);
-    const [hasMore, setHasMore] = useState(false);
+    const [hasMore, setHasMore] = useState(true);
     const [index, setIndex] = useState(PRODUCTS_PER_PAGE);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
+        setIsLoading(true);
+        setError(null);
         getProducts(query, PRODUCTS_PER_PAGE)
             .then((products) => {
                 setProducts(products);
+                setHasMore(products.length === PRODUCTS_PER_PAGE); // Check if more data is available
                 setIsLoading(false);
             })
             .catch((err) => {
                 setIsLoading(false);
+                setError("Failed to load products. Please try again.");
                 console.log(err);
             });
-        setIsLoading(true);
     }, [query]);
 
     const fetchMoreData = () => {
         getProducts(query, PRODUCTS_PER_PAGE, index)
             .then((products) => {
                 setProducts((prev) => [...prev, ...products]);
-
-                products.length > 0 ? setHasMore(true) : setHasMore(false);
+                setHasMore(products.length === PRODUCTS_PER_PAGE);
+                setIndex((prevIndex) => prevIndex + PRODUCTS_PER_PAGE);
             })
             .catch((err) => {
                 console.log(err);
             });
-        setIndex((prevIndex) => prevIndex + 5);
     };
 
     if (isLoading) return <ProductsListSkeleton PRODUCTS_PER_PAGE={6} />;
+
+    if (error) return <div>{error}</div>;
 
     if (products.length === 0) return <div>Không có sản phẩm nào!</div>;
 
@@ -47,11 +52,10 @@ const ProductsList = ({ query }) => {
             dataLength={products.length}
             next={fetchMoreData}
             hasMore={hasMore}
-            loader={<div>Loading...</div>}
         >
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                {products?.map((product, index) => (
-                    <ProductCard key={index} product={product} />
+                {products?.map((product) => (
+                    <ProductCard key={product.id} product={product} />
                 ))}
             </div>
         </InfiniteScroll>
