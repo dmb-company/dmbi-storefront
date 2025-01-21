@@ -19,5 +19,5 @@ export const NAV_ITEMS = [
     },
 ];
 
-export const PRODUCTS_PER_PAGE = 3;
+export const PRODUCTS_PER_PAGE = 6;
 export const NEWS_PER_PAGE = 4;
