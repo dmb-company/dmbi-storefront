@@ -18,6 +18,7 @@ const Uses = async () => {
                             useId={use?.id}
                             useImage={use?.image_url}
                             useName={use?.name}
+                            useLink={use?.link}
                         />
                     );
                 })}
